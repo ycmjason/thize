@@ -11,6 +11,8 @@ const myExecSync = (cmd) => execSync(cmd, {
   stdio: 'inherit',
 });
 
+myExecSync('npm publish');
+
 const writePackage = (package) => writeFileSync(JSON.stringify(package));
 
 aliases.forEach(a => {
