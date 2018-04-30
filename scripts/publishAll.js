@@ -33,4 +33,4 @@ aliases.forEach(a => {
   myExecSync('npm publish');
 });
 
-myEexecSync('git checkout package.json');
+myExecSync('git checkout package.json');
