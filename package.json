@@ -5,7 +5,7 @@
     "thi-ze",
     "thi-se"
   ],
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Add st/nd/rd/th to your number.",
   "main": "index.js",
   "scripts": {
