@@ -1,9 +1,7 @@
 {
   "name": "thize",
   "aliases": [
-    "thise",
-    "thi-ze",
-    "thi-se"
+    "thise"
   ],
   "version": "0.1.4",
   "description": "Add st/nd/rd/th to your number.",
