@@ -3,7 +3,7 @@
   "aliases": [
     "thise"
   ],
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Add st/nd/rd/th to your number.",
   "main": "index.js",
   "scripts": {
