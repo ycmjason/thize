@@ -1,11 +1,18 @@
 {
   "name": "thize",
+  "aliases": [
+    "thise",
+    "thi-ze",
+    "thi-se"
+  ],
   "version": "0.1.0",
   "description": "Add st/nd/rd/th to your number.",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "prepublish": "echo 'Use `npm run publishAll`!' && exit 1",
+    "publishAll": "./scripts/publishAll.js"
   },
   "author": "Jason Yu <me@ycmjason.com>",
   "license": "ISC",
