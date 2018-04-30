@@ -13,7 +13,10 @@ const myExecSync = (cmd) => execSync(cmd, {
 
 myExecSync('npm publish');
 
-const writePackage = (package) => writeFileSync(JSON.stringify(package));
+const writePackage = (package) => writeFileSync(
+  join(__dirname, '../package.json'),
+  JSON.stringify(package)
+);
 
 aliases.forEach(a => {
   writePackage({
