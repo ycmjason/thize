@@ -1,4 +1,6 @@
 # thize
+[![Build Status](https://travis-ci.org/ycmjason/thize.svg?branch=master)](https://travis-ci.org/ycmjason/thize)
+[![codecov](https://codecov.io/gh/ycmjason/thize/branch/master/graph/badge.svg)](https://codecov.io/gh/ycmjason/thize)
 
 Add st/nd/rd/th to your number.
 
