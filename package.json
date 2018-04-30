@@ -1,14 +1,29 @@
 {
   "name": "thize",
   "version": "0.0.1",
-  "description": "",
+  "description": "Add st/nd/rd/th to your number.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "author": "Jason Yu <me@ycmjason.com>",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^5.1.1"
-  }
+    "codecov": "^3.0.1",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycmjason/thize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ycmjason/thize/issues"
+  },
+  "homepage": "https://github.com/ycmjason/thize#readme"
 }

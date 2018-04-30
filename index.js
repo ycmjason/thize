@@ -1,6 +1,6 @@
 const thize = (i) => {
   i = Number(i) 
-  if (Number.isNaN(i)) throw 'i is not a number.';
+  if (Number.isNaN(i)) throw new Error('i is not a number.');
 
   switch (i) {
     case 0:

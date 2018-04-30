@@ -82,5 +82,11 @@ const specs = [
 describe('thize', () => {
   specs.forEach(({ description, input, expected }) => {
     it(description, () => assert.equal(thize(input), expected));
-  })
+  });
+
+  it('should throw when input is not Number-ish', () => {
+    assert.throws(() => {
+      thize('not a number');
+    }, Error, 'i is not a Number.')
+  });
 });
