@@ -10,6 +10,12 @@ Add st/nd/rd/th to your number.
 npm install --save thize
 ```
 
+Or if you are British,
+
+```
+npm install --save thise
+```
+
 ## Usage
 
 ```js
