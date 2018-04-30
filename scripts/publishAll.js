@@ -6,10 +6,16 @@ const { execSync } = require('child_process');
 const { writeFileSync } = require('fs');
 const { join } = require('path');
 
-const myExecSync = (cmd) => execSync(cmd, {
-  cwd: join(__dirname, '..'),
-  stdio: 'inherit',
-});
+const myExecSync = (cmd) => {
+  try {
+    execSync(cmd, {
+      cwd: join(__dirname, '..'),
+      stdio: 'inherit',
+    });
+  } catch (e) {
+    console.error('Something wrong when running `' + cmd + '`');
+  }
+};
 
 myExecSync('npm publish');
 
