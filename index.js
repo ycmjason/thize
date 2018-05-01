@@ -1,25 +1,21 @@
 const thize = (i) => {
-  i = Number(i) 
+  i = Number(i);
   if (Number.isNaN(i)) throw new Error('i is not a number.');
 
-  switch (i) {
-    case 0:
-      return 'th';
-    case 1:
-      return 'st';
-    case 2:
-      return 'nd';
-    case 3:
-      return 'rd';
-    case 11:
-      return 'th';
-    case 12:
-      return 'th';
-    case 13:
-      return 'th';
-    default:
-      return thize(Number(String(i).slice(1)));
+  if (!teen(i % 100)) {
+    switch (i % 10) {
+      case 1:
+        return 'st';
+      case 2:
+        return 'nd';
+      case 3:
+        return 'rd';
+    }
   }
+
+  return 'th';
 };
+
+const teen = (i) => { return 10 < i && i < 20 };
 
 module.exports = thize;

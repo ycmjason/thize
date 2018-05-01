@@ -3,6 +3,11 @@ const thize = require('../index');
 
 const specs = [
   {
+    description: '0th',
+    input: 0,
+    expected: 'th',
+  },
+  {
     description: '1st',
     input: 1,
     expected: 'st',
