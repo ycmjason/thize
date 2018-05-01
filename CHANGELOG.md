@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.1
+
+### Improvements
+
+- Added CHANGELOG.md
+
 ## 0.2.0
 
 ### Breaking Change
