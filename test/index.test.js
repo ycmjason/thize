@@ -82,6 +82,11 @@ const specs = [
     input: 51,
     expected: 'st',
   },
+  {
+    description: 'Negative 51st',
+    input: -51,
+    expected: 'st',
+  },
 ];
 
 describe('thize', () => {
