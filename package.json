@@ -3,6 +3,22 @@
   "aliases": [
     "thise"
   ],
+  "keywords": [
+    "ordinal",
+    "number",
+    "series",
+    "1st",
+    "2nd",
+    "3rd",
+    "4th",
+    "5th",
+    "nth",
+    "first",
+    "second",
+    "third",
+    "thize",
+    "thise"
+  ],
   "version": "0.2.1",
   "description": "Add st/nd/rd/th to your number.",
   "main": "index.js",
