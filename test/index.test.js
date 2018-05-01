@@ -5,99 +5,102 @@ const specs = [
   {
     description: '0th',
     input: 0,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '1st',
     input: 1,
-    expected: 'st',
+    suffix: 'st',
   },
   {
     description: '2nd',
     input: 2,
-    expected: 'nd',
+    suffix: 'nd',
   },
   {
     description: '3rd',
     input: 3,
-    expected: 'rd',
+    suffix: 'rd',
   },
   {
     description: '4th',
     input: 4,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '8th',
     input: 8,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '11th',
     input: 11,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '12th',
     input: 12,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '13th',
     input: 13,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '16th',
     input: 16,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '19th',
     input: 19,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '21st',
     input: 21,
-    expected: 'st',
+    suffix: 'st',
   },
   {
     description: '22nd',
     input: 22,
-    expected: 'nd',
+    suffix: 'nd',
   },
   {
     description: '111th',
     input: 111,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '115th',
     input: 115,
-    expected: 'th',
+    suffix: 'th',
   },
   {
     description: '51st',
     input: 51,
-    expected: 'st',
-  },
-  {
-    description: 'Negative 51st',
-    input: -51,
-    expected: 'st',
+    suffix: 'st',
   },
 ];
 
 describe('thize', () => {
-  specs.forEach(({ description, input, expected }) => {
-    it(description, () => assert.equal(thize(input), expected));
-    it(`Negative ${description}`, () => assert.equal(thize(-input), expected));
+  specs.forEach(({ description, input, suffix }) => {
+    it(description, () => assert.equal(thize(input), input + suffix));
+  });
+});
+
+describe('thize.suffix', () => {
+  specs.forEach(({ description, input, suffix }) => {
+    it(description, () => assert.equal(thize.suffix(input), suffix));
+    it(`Negative ${description}`, () => assert.equal(thize.suffix(-input), suffix));
   });
 
-  it('should throw when input is not Number-ish', () => {
-    assert.throws(() => {
-      thize('not a number');
-    }, Error, 'i is not a Number.')
+  it('should throw an Error when input is not a Number', () => {
+    assert.throws(() => { thize('not a number'); }, Error);
+  });
+
+  it('should throw an Error when input is not an Integer', () => {
+    assert.throws(() => { thize('51.3'); }, Error);
   });
 });

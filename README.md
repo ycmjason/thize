@@ -21,13 +21,12 @@ npm install --save thise
 ```js
 const thize = require('thize');
 
-thize(1);   // 'st'
-thize(2);   // 'nd'
-thize(3);   // 'rd'
-thize(4);   // 'th'
-thize(58);  // 'th'
-thize(201); // 'st'
-thize(384); // 'th
+thize(1);   // '1st'
+thize(58);  // '58th'
+thize(202); // '202nd'
+thize(-43); // '-43rd'
+
+thize.suffix(51); // 'st'
 ```
 
 ## Author
