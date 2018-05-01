@@ -5,7 +5,7 @@ const thize = (input) => {
 const suffix = (input) => {
   const i = Math.abs(input);
   if (Number.isNaN(i) || !Number.isInteger(i)) {
-    throw new Error("'" + input + '\' is not an Integer.');
+    throw new Error(`${input} is not an Integer.`);
   }
 
   if (teen(i % 100)) return 'th';
@@ -24,5 +24,5 @@ const suffix = (input) => {
 
 const teen = i => 10 < i && i < 20;
 
-module.exports = exports = thize;
+module.exports = thize;
 module.exports.suffix = suffix;
