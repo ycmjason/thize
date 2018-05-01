@@ -3,6 +3,11 @@ const thize = require('../index');
 
 const specs = [
   {
+    description: '0th',
+    input: 0,
+    expected: 'th',
+  },
+  {
     description: '1st',
     input: 1,
     expected: 'st',
@@ -77,11 +82,17 @@ const specs = [
     input: 51,
     expected: 'st',
   },
+  {
+    description: 'Negative 51st',
+    input: -51,
+    expected: 'st',
+  },
 ];
 
 describe('thize', () => {
   specs.forEach(({ description, input, expected }) => {
     it(description, () => assert.equal(thize(input), expected));
+    it(`Negative ${description}`, () => assert.equal(thize(-input), expected));
   });
 
   it('should throw when input is not Number-ish', () => {
