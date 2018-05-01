@@ -9,6 +9,7 @@
   "scripts": {
     "test": "nyc mocha",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "prepublishAll": "npm t",
     "publishAll": "./scripts/publishAll.js"
   },
   "author": "Jason Yu <me@ycmjason.com>",
