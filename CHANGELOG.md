@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.2
+
+### Chore
+
+- Added keywords
+
 ## 0.2.1
 
 ### Improvements
