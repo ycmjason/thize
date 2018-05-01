@@ -9,7 +9,9 @@
   "scripts": {
     "test": "nyc mocha",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "prepublishAll": "npm t",
+    "preversion": "npm test && ${EDITOR:-vi} CHANGELOG.md",
+    "version": "git add -A",
+    "prepublishAll": "npm test",
     "publishAll": "./scripts/publishAll.js"
   },
   "author": "Jason Yu <me@ycmjason.com>",
