@@ -82,22 +82,25 @@ const specs = [
     input: 51,
     expected: 'st',
   },
-  {
-    description: 'Negative 51st',
-    input: -51,
-    expected: 'st',
-  },
 ];
 
 describe('thize', () => {
   specs.forEach(({ description, input, expected }) => {
-    it(description, () => assert.equal(thize(input), expected));
-    it(`Negative ${description}`, () => assert.equal(thize(-input), expected));
+    it(description, () => assert.equal(thize(input), input + expected));
+  });
+});
+
+describe('thize.suffix', () => {
+  specs.forEach(({ description, input, expected }) => {
+    it(description, () => assert.equal(thize.suffix(input), expected));
+    it(`Negative ${description}`, () => assert.equal(thize.suffix(-input), expected));
   });
 
-  it('should throw when input is not Number-ish', () => {
-    assert.throws(() => {
-      thize('not a number');
-    }, Error, 'i is not a Number.')
+  it('should throw an Error when input is not a Number', () => {
+    assert.throws(() => { thize('not a number'); }, Error);
+  });
+
+  it('should throw an Error when input is not an Integer', () => {
+    assert.throws(() => { thize('51.3'); }, Error);
   });
 });
