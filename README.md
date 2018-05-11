@@ -24,7 +24,6 @@ const thize = require('thize');
 thize(1);   // '1st'
 thize(58);  // '58th'
 thize(202); // '202nd'
-thize(-43); // '-43rd'
 
 thize.suffix(51); // 'st'
 ```
